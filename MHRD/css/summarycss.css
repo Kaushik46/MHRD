@@ -1,0 +1,92 @@
+form-control {
+width:50% !important;
+
+}
+table.dataTable tbody td {
+    padding:3px !important;
+}
+table.dataTable thead th, table.dataTable thead td {
+   padding:3px !important;
+}
+table.dataTable tfoot th, table.dataTable tfoot td {
+    padding: 3px !important;
+}
+.tableFontStyle{
+font-size:16px !important;
+font-family: initial;
+text-align: center;
+}
+.SearchfontColor{
+font-size:10px !important;
+font-family: initial;
+}
+div.panel,p.flip
+{
+line-height: 30px;
+margin:auto;
+font-size:20px;
+padding:5px;
+text-align:center;
+background:#666633;
+border:solid 1px white;
+color:white;
+border-radius:3px;
+user-select:none
+}
+div.panel
+{
+display:none;
+}
+p.flip
+{
+cursor:pointer;
+}
+ .pag-link {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px;
+}
+.pag-link.disabled > span,
+.pag-link.current > span,
+.pag-link > a{
+    display: block;
+    border-radius: 50%;
+    font-size: 14px;
+    line-height: 1.42857;
+    margin-right: 5px;
+    padding: 10px 17px;
+    position: relative;
+    text-decoration: none;
+    border: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.pag-link:active > a,
+.pag-link:hover > a,
+.pag-link:focus > a,
+.pag-link.current > span{
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+.pag-link > a{
+    background-color: #666633;
+    color: #fff;
+    cursor: pointer;
+}
+.pag-link.disabled > span,
+.pag-link.current > span{
+    background-color: #007bff;
+    color: #fff;
+    cursor: inherit;
+}
+.pag-link:active > a,
+.pag-link:hover > a,
+.pag-link:focus > a {
+    border-color: #ec217c;
+    color: #fff;
+}
+	

@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Kaushik">
+
+  <title>MHRD</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="library/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+  <!-- Custom styles for this website -->
+  <link href="css/design.css" rel="stylesheet">
+	 <!-- Custom styles for this Jquery-Datatables -->
+   <link href="library/bootstrap/css/jquery.datatables.css" rel="stylesheet">
+    <!-- Custom table for this website -->
+    <link href="css/summarycss.css" rel="stylesheet">
+ 
+<style>
+
+</style>
+ 
+</head>
+
+<body style="padding-top: 0px; !important;background-color: #213b52;">
+<div class="container-fluid">
+			<div class="row" style="background-color: #213b52;">
+				<div class="col-sm-1" style="margin-top:5px">
+					
+						<a href="/mainhome">
+							<img src="img/1200px-Emblem_of_India.svg.png" style="height:64px;background-color: white;;margin-left: 50px;">
+						</a>
+				</div>
+				<div class="col-sm-4" style="margin-top:8px">
+					<h6 style="margin-left:10px !important;font-family: initial;" class="fontColor">
+							Department of School Education &amp; Literacy<br>
+							Ministry of Human Resource Development<br>
+								Government of India
+						</h6>
+				</div>
+				<div class="col-sm-7" style="margin-top:5px">
+					<h4 style="margin-left: 600px;font-family: initial;" class="fontColor">MHRD</h4>
+					<h5 style="margin-left: 520px;font-family: initial;" class="fontColor">Integrated Online Junction</h5>
+				</div>
+			</div>
+	
+	</div>
+  <!-- Navigation -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top" style="position:static !important;height:40px;background-color: black !important;">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+	  <i class="fa fa-home" aria-hidden="true"></i>
+	  </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="font-family: initial;color:white">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="font-family: initial;color:white">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="font-family: initial;color:white">Live Tenders</a>
+          </li>
+		   <li class="nav-item">
+            <a class="nav-link"  href="register.html" style="font-family: initial;color:white">Registration</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" style="font-family: initial;color:white" data-toggle="dropdown" style="font-family: initial;" aria-haspopup="true" aria-expanded="false">
+             States & UTs's
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+              <a class="dropdown-item" href="#">Karnataka</a>
+              <a class="dropdown-item" href="#">Delhi</a>
+              <a class="dropdown-item" href="#">Mumbai</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Page Content -->
+ 
+  </div>
+  <!-- /.container -->
+
+  <div class="container-fluid">
+  <div class="row" style="margin-top:15px">
+	<div class="col-sm-12 text-center">
+		<h4 style="font-family: initial;" class="fontColor">Live Tenders</h4>
+	</div>
+  </div>
+  <br>
+	<div class="row">
+		<div class="col-sm-12">
+		<p class="flip" style="font-family: initial;" class="fontColor">Search</p>
+		<div class="panel">
+		<br>
+			
+			<div class="row">
+				<div class="col-sm-1">
+					<label  style="font-size: 16px !important;">Tender <span>Number</span></label>
+				</div>
+				<div class="col-sm-3">
+				<input type="text" class="form-control"
+													 pattern="^[a-zA-Z0-9][a-zA-Z0-9-//]*"
+													title="Alphanumeric and special symbols(-/)"
+													maxlength="150" placeholder="Enter tender number"
+													autocomplete="off">
+				</div>
+						<div class="col-sm-1">
+					<label  style="font-size: 16px !important;">Item ID</label>
+				</div>
+				<div class="col-sm-3">
+			<input type="text" class="form-control"
+													maxlength="150" id="itemId"
+													title="Alphanumeric and special symbols(-/)"
+													pattern="^[a-zA-Z0-9][a-zA-Z0-9-//]*"
+													placeholder="Enter item ID">
+				</div>
+						<div class="col-sm-1">
+					<label style="font-size: 16px !important;">Description</label>
+				</div>
+				<div class="col-sm-3">
+		<textarea  id="textareaChars" style="height: 39px !important;resize: none;"
+													maxlength="200"
+													title="Alphabets,numbers and special charcters(#-/,.)"
+													class="formcontrol form-control txtarea"
+													placeholder="Enter description"></textarea>
+				</div>
+			</div>
+	
+			
+					<div class="row">
+				<div class="col-sm-1">
+					<label  style="font-size: 16px !important;">Tender Category </label>
+				</div>
+				<div class="col-sm-3">
+					<select class=" form-control">
+					<option value="" selected="selected">Select</option>
+												
+
+					</select>
+				</div>
+						<div class="col-sm-1">
+					<label  style="font-size: 16px !important;">Procurement Category</label>
+				</div>
+				<div class="col-sm-3">
+		<select class=" form-control">
+		<option value="" selected="selected">Select</option>
+		</select>
+				</div>
+						<div class="col-sm-1">
+					<label style="font-size: 16px !important;">Department</label>
+				</div>
+				<div class="col-sm-3">
+			<select class=" form-control" >
+			<option value="select">Select</option>
+			<option value="BMTC">BMTC</option>
+			<option value="KSRTC">KSRTC</option></select>
+				</div>
+			</div>
+					<div class="row">
+				<div class="col-sm-1">
+					<label  style="font-size: 16px !important;">Estimated Cost </label>
+				</div>
+				<div class="col-sm-3">
+				<select class=" form-control">
+								<option value="select">Select</option>
+								<option value="Equal">Equal</option>
+								<option value="LessThan">Less Than</option>
+								<option value="GreaterThan">Greater Than</option>
+								<option value="Between">Between</option>	
+
+					</select>
+				</div>
+						<div class="col-sm-1">
+					<label  style="font-size: 16px !important;">From</label>
+				</div>
+				<div class="col-sm-3">
+	<input type="number" class="form-control" pattern="^[0-9]" title='Only Number' min="0" step="1" >
+				</div>
+						<div class="col-sm-1">
+					<label style="font-size: 16px !important;">To</label>
+				</div>
+				<div class="col-sm-3">
+			<input type="number" class="form-control formcontrol" pattern="^[0-9]" title='Only Number' min="0" step="1" name="toCost" id="price-to">
+				</div>
+			</div>
+				<div class="row">
+				<div class="col-sm-1">
+					<label  style="font-size: 16px !important;">Date Criteria </label>
+				</div>
+				<div class="col-sm-3">
+		<select class=" form-control selected formcontrol" id="dateType">
+				<option value="selectdate">Select</option>
+				<option value="tenderPublishedDate">Published Date</option>
+				<option value="tenderClosing">Closing Date</option>
+				<option value="coverOneOpening">Cover1 Opening Date</option>
+				<option value="coverTwoOpening">Cover2 Opening Date</option>
+				<option value="coverThreeOpening">Cover3 Opening Date</option>
+												</select>
+				</div>
+						<div class="col-sm-1">
+					<label  style="font-size: 16px !important;">From</label>
+				</div>
+				<div class="col-sm-3">
+		<div class="input-group">
+	<input type="text" class="form-control " pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="Select date from" >
+					<div class="input-group-append">
+					<div class="input-group-text" id="btnGroupAddon2">
+					<i class="fa fa-calendar" aria-hidden="true"></i>
+					</div>
+					</div>								
+					</div>
+				</div>
+						<div class="col-sm-1">
+					<label style="font-size: 16px !important;">To</label>
+				</div>
+				<div class="col-sm-3">
+			<div class="input-group">
+													<input type="text"
+														class="form-control"
+														pattern="\d{1,2}/\d{1,2}/\d{4}"  name="toDate"
+														placeholder="Select date to" >
+
+													<div class="input-group-append">
+														<div class="input-group-text" id="btnGroupAddon2">
+															<i class="fa fa-calendar" aria-hidden="true"></i>
+														</div>
+													</div>
+												</div>
+				</div>
+			</div>
+			
+			
+			
+				<div class="row">
+				<div class="col-sm-1">
+					<label  style="font-size: 16px !important;">Sort By </label>
+				</div>
+				<div class="col-sm-3">
+		<select  class=" form-control">
+
+													<option value="tenderNumber">Tender number</option>
+													<option value="itemId">Item ID</option>
+													<!-- <option value="title">Title</option> -->
+													<option value="itemDescription">Description</option>
+													<option value="tenderCategoryId">Tender Category</option>
+													<option value="procurementCategoryId">Procurement
+														Category</option>
+													<option value="estimatedCost">Estimated Cost</option>
+													<option value="tenderPublishedDate" selected>Published
+														Date</option>
+													<option value="tenderClosing">Closing date</option>
+													<option value="coverOneOpening">Cover1 Opening
+														date</option>
+													<option value="coverTwoOpening">Cover2 Opening
+														date</option>
+													<option value="coverThreeOpening">Cover3 Opening
+														date</option>
+
+												</select>
+				</div>
+						<div class="col-sm-1">
+					<label  style="font-size: 16px !important;">Sort Order</label>
+				</div>
+				<div class="col-sm-3">
+						<select  class=" form-control">
+													<option value="asc">Ascending</option>
+													<option value="desc" selected>Descending</option>
+												</select>
+				</div>
+						<div class="col-sm-1">
+				
+				</div>
+				<div class="col-sm-3">
+	
+				</div>
+			</div>
+			
+			
+			<br>
+			
+						<div class="row">
+						<div class="col-sm-12 text-center">
+				<button class="btn btn-primary "
+										type="button" style="background-color:#007bff !important;border:#13b3bc !important">Search</button>
+							<button class="btn btn-primary " style="background-color:#007bff !important;border:#13b3bc !important"
+										type="button" >Reset</button>
+									
+		
+							
+						</div>
+					</div>
+		</div>
+		</div>
+	</div>
+	<br>
+  </div>
+	<div class="container-fluid">
+	<div class="row">
+			<div class="col-sm-12">
+				<table id="example" class="display table-bordered" style="width:100%">
+        <thead style="background: #666633;color:white;font-family: initial;">
+            <tr class="tableFontStyle">
+                <th >Actions</th>
+                <th >Department Name</th>
+                <th >Tender Number</th>
+                <th >Item ID</th>
+                <th>Tender Type</th>
+                <th >Tender Cover</th>
+				<th >Published Date</th>
+                <th >Closing Date</th>
+				<th >Opening Date</th>
+                <th >Estimated Cost</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr class="tableFontStyle">
+                <td><span class="fa fa-th-list" style="color:#007bff"></span></td>
+				<td>BMTC</td>
+                <td>Tender-001</td>
+                <td>Item 01</td>
+                <td>Limited Tender</td>
+                <td>Cover one</td>
+                <td>12/06/2020</td>
+				<td>02/08/2020</td>
+                <td>23/12/2020</td>
+                <td>320,800</td>
+            </tr>
+            <tr class="tableFontStyle">
+               <td><span class="fa fa-th-list" style="color:#007bff"></span></td>
+				<td>BMTC</td>
+                <td>Tender-002</td>
+                <td>Item 02</td>
+                <td>Single Tender</td>
+                <td>Cover two</td>
+                <td>2/06/2020</td>
+				<td>22/08/2020</td>
+                <td>13/10/2020</td>
+                <td>420,800</td>
+            </tr>
+            <tr class="tableFontStyle">
+                  <td><span class="fa fa-th-list" style="color:#007bff"></span></td>
+				<td>BMTC</td>
+                <td>Tender-003</td>
+                <td>Item 04</td>
+                <td>Limited Tender</td>
+                <td>Cover three</td>
+                <td>05/04/2020</td>
+				<td>17/08/2020</td>
+                <td>23/11/2020</td>
+                <td>522,820</td>
+            </tr>
+            <tr class="tableFontStyle">
+                  <td><span class="fa fa-th-list" style="color:#007bff"></span></td>
+				<td>BMTC</td>
+                <td>Tender-004</td>
+                <td>Item 04</td>
+                <td>Request for Quotation</td>
+                <td>Cover two</td>
+                <td>04/08/2020</td>
+				<td>16/09/2020</td>
+                <td>28/02/2020</td>
+                <td>124,820</td>
+            </tr>
+            <tr class="tableFontStyle">
+                <td><span class="fa fa-th-list" style="color:#007bff"></span></td>
+				<td>BMTC</td>
+                <td>Tender-005</td>
+                <td>Item 05</td>
+                <td>Open Tender</td>
+                <td>Cover three</td>
+                <td>03/05/2020</td>
+				<td>16/02/2020</td>
+                <td>15/01/2020</td>
+                <td>720,800</td>
+            </tr>
+            <tr class="tableFontStyle">
+                  <td><span class="fa fa-th-list" style="color:#007bff"></span></td>
+				<td>BMTC</td>
+                <td>Tender-006</td>
+                <td>Item 06</td>
+                <td>Pre-Qualification</td>
+                <td>Cover three</td>
+                <td>10/10/2020</td>
+				<td>12/06/2020</td>
+                <td>29/09/2020</td>
+                <td>550,800</td>
+            </tr>
+            <tr class="tableFontStyle">
+                <td><span class="fa fa-th-list" style="color:#007bff"></span></td>
+				<td>BMTC</td>
+                <td>Tender-007</td>
+                <td>Item 07</td>
+                <td>Limited Tender</td>
+                <td>Cover one</td>
+                <td>27/06/2020</td>
+				<td>13/08/2020</td>
+                <td>05/10/2020</td>
+                <td>770,800</td>
+            </tr>
+            <tr class="tableFontStyle">
+                 <td><span class="fa fa-th-list" style="color:#007bff"></span></td>
+				<td>BMTC</td>
+                <td>Tender-008</td>
+                <td>Item 08</td>
+                <td>Request for Quotation</td>
+                <td>Cover three</td>
+                <td>22/08/2020</td>
+				<td>18/09/2020</td>
+                <td>22/11/2020</td>
+                <td>670,800</td>
+            </tr>
+            <tr class="tableFontStyle">
+                 <td><span class="fa fa-th-list" style="color:#007bff"></span></td>
+				<td>BMTC</td>
+                <td>Tender-009</td>
+                <td>Item 09</td>
+                <td>Limited Tender</td>
+                <td>Cover two</td>
+                <td>31/06/2020</td>
+				<td>12/09/2020</td>
+                <td>22/02/2020</td>
+                <td>450,800</td>
+            </tr>
+            <tr class="tableFontStyle">
+                 <td><span class="fa fa-th-list" style="color:#007bff"></span></td>
+				<td>BMTC</td>
+                <td>Tender-001</td>
+                <td>Item 01</td>
+                <td>Limited Tender</td>
+                <td>Cover one</td>
+                <td>12/06/2020</td>
+				<td>12/06/2020</td>
+                <td>12/06/2020</td>
+                <td>100,800</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>
+	</div>
+	<br>
+  <div class="container">
+	<div class="row">
+	<div class="col-sm-12 text-center">
+		<ul class="pagination-custom text-center">
+	        <li class="pag-link"><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
+			 <li class="pag-link current"><span>1</span></li>
+	      
+	        <li class="pag-link"><a href="#">2</a></li>
+	         <li class="pag-link"><a href="#">3</a></li>
+	        <li class="pag-link"><a href="#">4</a></li>
+	        <li class="pag-link"><a href="#">5</a></li>
+	        <li class="pag-link"><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
+        </ul>
+	</div>
+	
+	</div>
+</div>
+  <br>
+<!-- Footer -->
+<footer style="background-color:#343a40;" class="page-footer font-small blue pt-4">
+  <div class="container-fluid text-center text-md-left">
+    <div class="row">
+      <div class="col-md-6 mt-md-0 mt-3">
+        <h5 class="text-uppercase"><img class="card-img-top" src="img/NIC.jpg" style="height:140px; !important;width: 50% !important" alt=""></h5>
+        <p style="color:white !important">This site is designed, developed, maintained and hosted by National Informatics Centre (NIC), Ministry of Electronics & Information Technology, Government of India.
+v19.1047.0318</p>
+      </div>
+      <hr class="clearfix w-100 d-md-none pb-3">
+      <div class="col-md-3 mb-md-0 mb-3">
+        <h5 class="text-uppercase" style="color:white !important">Main</h5>
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!" style="color:white !important">Home</a>
+          </li>
+          <li>
+            <a href="#!" style="color:white !important">About</a>
+          </li>
+          <li>
+            <a href="#!" style="color:white !important">FAQ's</a>
+          </li>
+          <li>
+            <a href="#!" style="color:white !important">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-3 mb-md-0 mb-3">
+        <h5 class="text-uppercase" style="color:white !important">Other Links</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!" style="color:white !important">Digital Repository</a>
+          </li>
+          <li>
+            <a href="#!" style="color:white !important">Shagun Website</a>
+          </li>
+          <li>
+            <a href="#!" style="color:white !important">State/UT MIS Coordinators</a>
+          </li>
+          <li>
+            <a href="#!" style="color:white !important">School GIS</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3" style="color:white !important;background-color:black">© 2020 Copyright |
+    <a href="#" style="color:white !important"> All Rights Reserved</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="library/jquery/jquery.min.js"></script>
+  <script src="library/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/jquery3.1.js"></script>
+  <script src="js/datatables/jqueryDatatables.js"></script>
+</body>
+<script>
+ $(document).ready(function () {
+	    	var table = $('#example').DataTable({
+	    		'searching':false,
+	    		 'autoWidth': false,
+	    		'paging':false,
+	    		 'ordering': false,
+	    		'info':false,
+				 "bLengthChange": false,
+
+	    	});
+	
+
+});
+$(document).ready(function(){
+$(".flip").click(function(){
+$(".panel").fadeToggle(1000);
+});
+});
+</script>
+
+</html>
